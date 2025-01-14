@@ -1,0 +1,14 @@
+{
+    "name": "hello",
+    "description": "Simple Hello in Node",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "author": "",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "express": "^4.21.2"
+    }
+}
