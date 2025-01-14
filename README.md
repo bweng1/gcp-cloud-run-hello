@@ -9,9 +9,10 @@
 - Build Dockerfile on localhost
   > docker build -t hellocloudrun .
 
-- Using Cloud Build to build Dockerfile
+- Using Cloud Build to build Dockerfile and upload to Artifact Registry.
   > gcloud builds submit --tag gcr.io/$GOOGLE_CLOUD_PROJECT/hellocloudrun
-  > gcloud auth configure-docker // Register gcloud as the credential helper for all Google-supported Docker registries
+
+  > gcloud auth configure-docker
 
 - Localhost testing
   > docker run -d -p 8080:8080 hellocloudrun
@@ -19,7 +20,6 @@
 - Cloud Shell testing
   > docker run -d -p 8080:8080 gcr.io/$GOOGLE_CLOUD_PROJECT/hellocloudrun
 
-- Containerize your application and upload to Artifact Registry.
 - Deploy a containerized application on Cloud Run.
   > gcloud run deploy --image gcr.io/$GOOGLE_CLOUD_PROJECT/hellocloudrun --allow-unauthenticated --region=$LOCATION
 
